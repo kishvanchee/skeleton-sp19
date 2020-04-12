@@ -6,7 +6,7 @@ public class NBody {
         return radius;
     }
 
-    public static Planet[] readBodies (String filename) {
+    public static Planet[] readPlanets (String filename) {
         In in = new In(filename);
         int N = in.readInt();
         double radius = in.readDouble();
@@ -32,7 +32,7 @@ public class NBody {
         String filename = args[2];
         
         double radius = readRadius(filename);
-        Planet[] bodies = readBodies(filename);
+        Planet[] bodies = readPlanets(filename);
         int N = bodies.length;
 
         StdDraw.setScale(-radius, radius);
